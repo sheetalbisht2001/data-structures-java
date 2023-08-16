@@ -37,6 +37,7 @@
 // Constraints:
 // 1 <= N <= 108
 
+/* starts here */
 
 class Solution {
     static int countSquares(int N) {

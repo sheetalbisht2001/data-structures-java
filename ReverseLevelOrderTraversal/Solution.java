@@ -38,32 +38,32 @@
 //        Constraints:
 //        1 ≤ N ≤ 10^4
 
-        package ReverseLevelOrderTraversal;
+package ReverseLevelOrderTraversal;
 
-class Tree
+class Solution
 {
-        public ArrayList<Integer> reverseLevelOrder(Node node)
-        {
-                // code here
+    public ArrayList<Integer> reverseLevelOrder(Node node)
+    {
+        // code here
 
 
-                ArrayList<Integer> ar=new ArrayList<>();
-                Queue<Node> q=new LinkedList<>();
+        ArrayList<Integer> ar=new ArrayList<>();
+        Queue<Node> q=new LinkedList<>();
 
-                if(node==null)return ar;
+        if(node==null)return ar;
 
-                q.add(node);
+        q.add(node);
 
-                while(q.isEmpty()==false){
-                        int count=q.size();
-                        for(int i=0;i<count;i++){
-                                Node del=q.poll();
-                                ar.add(0,del.data);
-                                if(del.right!=null)q.add(del.right);
-                                if(del.left!=null)q.add(del.left);
-                        }
-                }
-                return ar;
-
+        while(q.isEmpty()==false){
+            int count=q.size();
+            for(int i=0;i<count;i++){
+                Node del=q.poll();
+                ar.add(0,del.data);
+                if(del.right!=null)q.add(del.right);
+                if(del.left!=null)q.add(del.left);
+            }
         }
+        return ar;
+
+    }
 }

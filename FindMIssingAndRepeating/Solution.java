@@ -29,7 +29,7 @@
 //        1 ≤ Arr[i] ≤ N
 
 
-
+import java.util.Scanner ;
 class Solution{
     public int[] findTwoElement(int[] arr, int n) {
         int a = 0, b = 0;

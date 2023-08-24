@@ -34,7 +34,24 @@
 
 
 
+
     package HeightOfBinaryTree;
 
-public class Solution {
+class Solution {
+    //Function to find the height of a binary tree.
+    int height(Node node)
+    {
+        // code here
+        if (node == null) {
+            return 0;
+        }
+
+        // Recursively calculate the height of the left and right subtrees.
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+
+        // Return the maximum height of the left and right subtrees plus 1 (for the current node).
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
 }
+

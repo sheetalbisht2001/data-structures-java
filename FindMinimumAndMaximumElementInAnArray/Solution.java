@@ -38,7 +38,7 @@
 
         package FindMinimumAndMaximumElementInAnArray;
 
-class Compute
+class Solution
 {
     static Pair getMinMax(long a[], long n)
     {

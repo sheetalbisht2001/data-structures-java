@@ -35,11 +35,27 @@
 
         package DiameterOfABinaryTree;
 
-public class Solution {
+class Solution {
+        // Function to return the diameter of a Binary Tree.
+        int diameter(Node root) {
+                // Your code here
 
-
-
-
-
-
+                int dia[] = new int[1];
+                depth(root, dia);
+                return dia[0];
+        }
+        int depth(Node root, int[] dia) {
+                if(root == null) return 0;
+                int left = depth(root.left, dia);
+                int right = depth(root.right, dia);
+                dia[0] = Math.max(dia[0], left + right + 1);
+                return 1 + Math.max(left, right);
+        }
 }
+
+
+
+
+
+
+

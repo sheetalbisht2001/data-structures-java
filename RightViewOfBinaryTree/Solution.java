@@ -42,5 +42,26 @@
 
         package RightViewOfBinaryTree;
 
-public class Solution {
+class Solution{
+        //Function to return list containing elements of right view of binary tree.
+        ArrayList<Integer> rightView(Node node) {
+                //add code here.
+
+                ArrayList<Integer> list = new ArrayList<>();
+                goDFS(node, 0, list);
+                return list;
+        }
+
+        private void goDFS(Node node, int lvl, List<Integer> list) {
+                if (node == null)
+                        return;
+                if (list.size() < lvl++ + 1){
+                        list.add(node.data);
+                }
+                goDFS(node.right, lvl, list);
+                goDFS(node.left, lvl, list);
+
+        }
 }
+
+
